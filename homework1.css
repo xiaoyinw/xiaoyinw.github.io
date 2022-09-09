@@ -1,0 +1,53 @@
+.directory {
+    text-align: center;
+    border: 2px solid black;
+    padding: 0.5;
+    margin: 0.5% 28% 5% 28%;
+}
+
+.directory a {
+    text-decoration: none;
+    padding: 2%;
+    margin-bottom: 3%;
+    color: black;
+}
+
+.directory .imgs {
+    padding-bottom: 5%;
+}
+
+#pier {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60%;
+  width: 50%;
+  padding: 0.5%;
+}
+
+#road {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60%;
+    width: 50%;
+    padding: 0.5%;
+}
+
+#lake {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    height: 60%;
+    width: 50%;
+    padding: 0.5%;
+}
+
+footer {
+    text-align: center;
+}
+
+footer img {
+    margin: 1%;
+}
