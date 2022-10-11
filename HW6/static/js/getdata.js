@@ -5,6 +5,15 @@ $(document).ready(function() {
         distance: $('#distance').val(),
         category: $('#category').val(),
         location: $('#location').val()}, function(data) {
+            nofound = document.getElementById('nofound')
+            businessdiv  = document.getElementById("businessdiv")
+            if (data['businesses'].length === 0) {
+                nofound.hidden = false
+                businessdiv.hidden = true
+                return
+            }
+            nofound.hidden = true
+            businessdiv.hidden = false
             businessinfo = data['businesses']
             businessdiv  = document.getElementById("businessdiv")
             businessdiv.innerHTML = ''

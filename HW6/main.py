@@ -28,7 +28,7 @@ def search():
     headers = {'Authorization': 'Bearer %s' % yelp_key}
     yelp_url ='https://api.yelp.com/v3/businesses/search'
     
-    meters = int(args['distance']) * 1609.344
+    meters = int(args['distance']) * 1609.344 if args['distance'] else 10 * 1609.344
     params = {'term': args['keyword'],'latitude': float(lat), 'longitude': float(lng), 'radius': int(meters), 'categories': args['category'] if args['category'] != "Default" else "all", 'limit': 20}
     req=requests.get(yelp_url, params=params, headers=headers)
     return {'businesses': req.json()['businesses']}
